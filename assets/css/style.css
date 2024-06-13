@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../media/pink-glitter.webp');
+    background-repeat:round;
+    overflow: hidden;
+}
+
+.trail {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../media/heart.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    animation: fadeOut 0.5s linear forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+.spicy-rice-regular {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title-container {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.title {
+    font-size: 50px;
+    color: transparent;
+    background: linear-gradient(45deg, #fff, #f0f, #0ff, #f0f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 200%;
+    animation: glitterAnimation 5s linear infinite;
+  }
+  
+  @keyframes glitterAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 200%; }
+  }
+
+.haj-container {
+    width: 420px; /* HE HE HE HAR */
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.haj-container:hover .left-image,
+.haj-container:hover .right-image { 
+    animation: flipHorizontal 1s linear infinite;
+}
+
+.left-image {
+    width: 400px;
+    height: auto;
+    margin:10px;
+    transform: scaleX(-1);
+    transition: transform 0.1s ease-in-out;
+}
+
+
+.left-image, .right-image {
+    width: 400px;
+    height: auto;
+    margin:10px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.left-image:hover {
+    animation: flipHorizontal 2s linear infinite;
+}
+
+.right-image:hover {
+    animation: flipHorizontal 2s linear infinite;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-container img {
+    width: 500px;
+    height: auto;
+    margin: 10px;
+}
+
+@keyframes flipHorizontal {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(-1); }
+    100% { transform: scaleX(1); }
+}
