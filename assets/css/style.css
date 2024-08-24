@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-image: url('../../media/pink-glitter.webp');
-    background-repeat:round;
-    overflow: hidden;
+    background-repeat: round;
+    overflow-y: auto;
 }
 
 .trail {
@@ -40,60 +40,59 @@ body {
 }
 
 .title-container {
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .title {
-    font-size: 50px;
+    font-size: 6vw;
     color: transparent;
     background: linear-gradient(45deg, #fff, #f0f, #0ff, #f0f);
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 200% 200%;
     animation: glitterAnimation 5s linear infinite;
-  }
-  
-  @keyframes glitterAnimation {
-    0% { background-position: 0 0; }
-    100% { background-position: 200% 200%; }
-  }
+    text-align: center;
+}
+
+@keyframes glitterAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
 
 .haj-container {
-    width: 420px; /* HE HE HE HAR */
-    height: 420px;
+    width: 25vw;
+    max-width: 300px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.haj-container:hover .left-image,
-.haj-container:hover .right-image { 
-    animation: flipHorizontal 1s linear infinite;
+.left-image,
+.right-image {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.1s ease-in-out;
 }
 
 .left-image {
-    width: 400px;
-    height: auto;
-    margin:10px;
     transform: scaleX(-1);
-    transition: transform 0.1s ease-in-out;
 }
 
-
-.left-image, .right-image {
-    width: 400px;
-    height: auto;
-    margin:10px;
-    transition: transform 0.1s ease-in-out;
-}
-
-.left-image:hover {
-    animation: flipHorizontal 2s linear infinite;
-}
-
+.left-image:hover,
 .right-image:hover {
     animation: flipHorizontal 2s linear infinite;
 }
@@ -103,16 +102,30 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
 }
 
+
 .gallery-container img {
-    width: 500px;
+    width: 30vw;
+    max-width: 400px;
     height: auto;
     margin: 10px;
 }
 
+
 @keyframes flipHorizontal {
-    0% { transform: scaleX(1); }
-    50% { transform: scaleX(-1); }
-    100% { transform: scaleX(1); }
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
 }
