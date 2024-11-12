@@ -11,7 +11,7 @@ body {
 }
 
 .marquee {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     background-color: purple;
@@ -20,6 +20,7 @@ body {
     font-size: 1.5em;
     padding: 5px;
     border: 2px solid lime;
+    box-sizing: border-box;
 }
 
 .marquee span {
@@ -90,6 +91,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .gallery-container img {
