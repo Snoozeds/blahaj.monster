@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../../media/pink-glitter.webp');
+    background-image: url('../../media/animated-glitter.webp');
     background-repeat: round;
     overflow-y: auto;
 }
