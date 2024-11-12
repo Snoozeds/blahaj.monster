@@ -10,8 +10,79 @@ body {
     overflow-y: auto;
 }
 
+.popup-ad {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.popup-ad img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.close-ad {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.close-ad:hover {
+    background-color: darkred;
+}
+
+.toggle-ad {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: lime;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10000;
+    visibility: hidden
+}
+
+.toggle-ad:hover {
+    background-color: darkgreen;
+}
+
+.banner {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+.banner-left {
+    left: 0;
+}
+
+.banner-right {
+    right: 0;
+}
+
 .marquee {
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     overflow: hidden;
     white-space: nowrap;
     background-color: purple;
@@ -21,6 +92,7 @@ body {
     padding: 5px;
     border: 2px solid lime;
     box-sizing: border-box;
+    z-index: 999;
 }
 
 .marquee span {
@@ -55,6 +127,7 @@ body {
 }
 
 .title-container {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,11 +158,9 @@ body {
 
 .gallery-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -173,5 +244,43 @@ body {
     to {
         opacity: 0;
         transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+@media (max-width: 2560px) {
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 2400px) {
+    .title {
+        font-size: 80px;
+        margin-top: 20px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+    .banner {
+        width: 332px;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+    }
+
+    .title-container {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 1919px) {
+    .banner {
+        display: none;
     }
 }
