@@ -284,3 +284,21 @@ body {
         display: none;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    body {
+        background-image: url('../../media/static-glitter.webp');
+    }
+
+    .marquee span {
+        animation: none;
+    }
+
+    .blinking-text {
+        animation: none;
+    }
+
+    .gallery-container img {
+        animation: none;
+    }
+}
