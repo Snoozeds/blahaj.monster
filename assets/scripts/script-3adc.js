@@ -40,7 +40,8 @@ const mainContent = document.getElementById("main-content");
 const adImages = [
     "media/fake ads/blahajarly.webp",
     "media/fake ads/local-blahajs.webp",
-    "media/fake ads/safe-vpn.webp"
+    "media/fake ads/safe-vpn.webp",
+    "media/fake ads/blahaj-stone-dubtoshi.webp"
 ];
 
 // Check sessionStorage for the user's preference
