@@ -49,7 +49,7 @@ let showPopups = localStorage.getItem("showPopups") !== "false";
 let popupVisible = false;
 
 function showPopupAd() {
-    if (showPopups && !popupVisible) {
+    if (showPopups && !popupVisible && popupAdImg != null) {
         const randomIndex = Math.floor(Math.random() * adImages.length);
         popupAdImg.src = adImages[randomIndex];
         popupAd.style.display = "block";
@@ -66,7 +66,9 @@ setInterval(() => {
     showPopupAd();
 }, 15000);
 
-closeAdButton.addEventListener("click", closePopupAd);
+if (closeAdButton != null) {
+    closeAdButton.addEventListener("click", closePopupAd);
+}
 
 // Settings
 const settingsButton = document.querySelector('.settings-button');
