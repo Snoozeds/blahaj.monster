@@ -40,7 +40,9 @@ const adImages = [
     "media/fake ads/blahajarly.webp",
     "media/fake ads/local-blahajs.webp",
     "media/fake ads/safe-vpn.webp",
-    "media/fake ads/blahaj-stone-dubtoshi.webp"
+    "media/fake ads/blahaj-stone-dubtoshi.webp",
+    "media/fake ads/blahaj-bat.webp",
+    "media/fake ads/blahaj-credit"
 ];
 
 // Check localStorage for the user's preference
