@@ -53,9 +53,16 @@ let popupVisible = false;
 function showPopupAd() {
     if (showPopups && !popupVisible && popupAdImg != null) {
         const randomIndex = Math.floor(Math.random() * adImages.length);
-        popupAdImg.src = adImages[randomIndex];
-        popupAd.style.display = "block";
-        popupVisible = true;
+        const src = adImages[randomIndex];
+
+        // Preload image
+        const tempImg = new Image();
+        tempImg.onload = function() {
+            popupAdImg.src = src;
+            popupAd.style.display = "block";
+            popupVisible = true;
+        };
+        tempImg.src = src;
     }
 }
 
