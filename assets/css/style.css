@@ -561,3 +561,19 @@ input:checked+.toggle-slider:before {
         transform: none;
     }
 }
+
+/* Link to the mega repo */
+.mega-mods-section {
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.mega-mods-info {
+    text-align: center;
+    height: auto;
+}
+
+.mega-mods-info h3 {
+    margin: 0;
+    line-height: 1.3;
+}
